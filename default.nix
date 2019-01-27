@@ -294,6 +294,9 @@ in rec {
         # pack command ignores cwd option
         rm -f .yarnrc
         cd $out/libexec/${pname}/deps/${pname}
+        pwd
+        ls -hal
+        #cp ../../../../../package.json .
         mkdir -p $out/tarballs/
         yarn pack --ignore-scripts --filename $out/tarballs/${baseName}.tgz
       '';
